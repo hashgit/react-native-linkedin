@@ -54,4 +54,4 @@ $ yarn add react-native-linkedin
 Feel free to [contact me](mailto:contact@xaviercarpentier.com) or [create an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
 
 ## Licence
-[MIT](https://github.com/xcarpentier/react-native-linkedin/blob/master/LICENSE.md)
+[MIT](https://github.com/xcarpentier/react-native-linkedin/blob/master/LICENSE)
