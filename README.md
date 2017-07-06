@@ -14,6 +14,21 @@ Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Mo
 * Sure: open-source
 * Almost readable & understandable code: JavaScript & React
 
+## Installation
+WIP
+<!--
+```bash
+$ npm i react-native-linkedin --save
+```
+or
+```bash
+$ yarn add react-native-linkedin
+```
+-->
+
+## Documentation
+WIP
+
 ## Others alternatives
 * [react-native-linkedin-login](https://www.npmjs.com/package/react-native-linkedin-login)
 * [react-native-linkedin-sdk](https://www.npmjs.com/package/react-native-linkedin-sdk)
