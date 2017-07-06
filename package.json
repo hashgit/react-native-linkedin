@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
   "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
 }
