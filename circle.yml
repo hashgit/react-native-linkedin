@@ -1,15 +1,9 @@
 machine:
-  pre:
-    - sudo rm -rf /usr/local/android-sdk-linux
-    - sudo rm -rf /usr/local/go
-    - sudo rm -rf /usr/local/android-ndk
-    - sudo rm -rf /home/ubuntu/.android
   node:
     version: 7.10.0
   environment:
     YARN_VERSION: 0.24.6
     PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
-
 
 dependencies:
   pre:
