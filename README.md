@@ -1,9 +1,8 @@
 # :link: React-Native LinkedIn
 [![NPM version](https://badge.fury.io/js/react-native-linkedin.svg)](http://badge.fury.io/js/react-native-linkedin)
 [![Downloads](https://img.shields.io/npm/dm/react-native-linkedin.svg)](https://www.npmjs.com/package/react-native-linkedin)
-<!--
 [![Circle CI](https://circleci.com/gh/xcarpentier/react-native-linkedin.svg?style=svg)](https://circleci.com/gh/xcarpentier/react-native-linkedin)
--->
+
 Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Modal*
 
 *Please note that is on WIP (ie. work in progress)!*
@@ -26,8 +25,18 @@ $ yarn add react-native-linkedin
 ```
 -->
 
-## Documentation
-WIP
+## Documentation (WIP)
+
+### Props
+| Name | Return Type | Arguments | Description |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+### Example
+```JavaScript
+// TODO
+```
+
 
 ## Others alternatives
 * [react-native-linkedin-login](https://www.npmjs.com/package/react-native-linkedin-login)
