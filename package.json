@@ -1,0 +1,8 @@
+{
+  "name": "react-native-linkedin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
+  "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
+  "license": "MIT"
+}
