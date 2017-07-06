@@ -1,5 +1,5 @@
 # :link: React-Native LinkedIn
-[![NPM version](https://badge.fury.io/js/rreact-native-linkedin.svg)](http://badge.fury.io/js/react-native-linkedin)
+[![NPM version](https://badge.fury.io/js/react-native-linkedin.svg)](http://badge.fury.io/js/react-native-linkedin)
 [![Downloads](https://img.shields.io/npm/dm/react-native-linkedin.svg)](https://www.npmjs.com/package/react-native-linkedin)
 [![Circle CI](https://circleci.com/gh/xcarpentier/react-native-linkedin.svg?style=svg)](https://circleci.com/gh/xcarpentier/react-native-linkedin)
 
