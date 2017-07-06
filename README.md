@@ -1,7 +1,7 @@
 # :link: React-Native LinkedIn
-Simple **LinkedIn** login library for **React-Native** with **WebView** into a **Modal** 
+Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Modal*
 
-***Please note that is on work in progress.***
+***Please note that is on WIP (ie. work in progress)!***
 
 ## Benefits & others:
 * no need to link a native library
