@@ -1,4 +1,4 @@
-# ReactNative LinkedIn
+# React-Native LinkedIn
 Simple LinkedIn login library for React-Native (with WebView and Modal) WIP
 
 ## Benefits & others:
