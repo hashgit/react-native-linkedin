@@ -1,6 +1,6 @@
 {
   "name": "react-native-linkedin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
   "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
@@ -26,9 +26,15 @@
     "jest": "^20.0.4"
   },
   "eslintConfig": {
-    "extends": ["airbnb", "airbnb-flow"],
+    "extends": [
+      "airbnb",
+      "airbnb-flow"
+    ],
     "parser": "babel-eslint",
-    "plugins": ["react", "react-native"],
+    "plugins": [
+      "react",
+      "react-native"
+    ],
     "globals": {
       "__DEV__": false,
       "fetch": false,
@@ -40,7 +46,9 @@
       "FormData": false
     },
     "rules": {
-      "global-require": [0],
+      "global-require": [
+        0
+      ],
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
       "import/extensions": 0,
@@ -53,8 +61,15 @@
       "camelcase": 0,
       "no-underscore-dangle": 0,
       "no-confusing-arrow": 0,
-      "semi": ["error", "never"],
-      "max-len": [2, 80, 2]
+      "semi": [
+        "error",
+        "never"
+      ],
+      "max-len": [
+        2,
+        80,
+        2
+      ]
     }
   }
 }
