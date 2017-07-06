@@ -37,8 +37,21 @@ $ yarn add react-native-linkedin
 // TODO
 ```
 
-
 ## Others alternatives
 * [react-native-linkedin-login](https://www.npmjs.com/package/react-native-linkedin-login)
 * [react-native-linkedin-sdk](https://www.npmjs.com/package/react-native-linkedin-sdk)
 * [react-native-linkedin-oauth](https://www.npmjs.com/package/react-native-linkedin-oauth)
+
+## Contribution
+
+- [@xcapentier](mailto:contact@xaviercarpentier.com) The main author.
+
+## FAQ
+### Is it supported and tested both on android and iOS?
+**YES**
+
+## Questions
+Feel free to [contact me](mailto:contact@xaviercarpentier.com) or [create an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
+
+## Licence
+[MIT](https://github.com/xcarpentier/react-native-linkedin/blob/master/LICENSE.md)
