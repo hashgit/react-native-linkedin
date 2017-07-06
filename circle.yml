@@ -1,0 +1,41 @@
+machine:
+  pre:
+    - sudo rm -rf /usr/local/android-sdk-linux
+    - sudo rm -rf /usr/local/go
+    - sudo rm -rf /usr/local/android-ndk
+    - sudo rm -rf /home/ubuntu/.android
+  node:
+    version: 7.10.0
+  environment:
+    YARN_VERSION: 0.24.6
+    PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+
+dependencies:
+  pre:
+    - |
+        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+        if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
+          echo "Download and install Yarn."
+          curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
+        else
+          echo "The correct version of Yarn is already installed."
+        fi
+  override:
+    - yarn install --no-progress --no-emoji
+  cache_directories:
+    - "node_modules"
+    - ~/.yarn
+    - ~/.yarn-cache
+
+test:
+  override:
+    - yarn run lint
+    - yarn run flow
+    - yarn run test
+
+deployment:
+  npm:
+    tag: /v[0-9]+(\.[0-9]+)*/
+        commands:
+      - npm publish
