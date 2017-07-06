@@ -1,2 +1,2 @@
 # react-native-linkedin
-Simple LinkedIn login libraryfor React-Native (with WebView)
+Simple LinkedIn login library for React-Native (with WebView)
