@@ -40,7 +40,7 @@ $ yarn add react-native-linkedin
 
 Please not that you should pass your linkedin client id and you secret key to the component.
 You should be aware that key can be found if you store it directly to your code. 
-**It's strongly recommande to not declare both on your code but found a way to keep it secret (ie. get it from server, encrypt it, ...)**
+**I strongly recommand to not declare both on your code but found a way to keep it secret (ie. get it from server, encrypt it, ...)**
 
 ## Others alternatives
 * [react-native-linkedin-login](https://www.npmjs.com/package/react-native-linkedin-login)
