@@ -3,7 +3,8 @@
  * @flow
  */
 
-import React, { PropTypes } from 'React'
+import React from 'React'
+import PropTypes from 'prop-types'
 import { pipe, evolve } from 'ramda'
 import { v4 } from 'uuid'
 
@@ -17,24 +18,19 @@ const ACCESS_TOKEN_URL: string =
   'https://www.linkedin.com/uas/oauth2/accessToken'
 
 type QueryAuth = {
-  response_type: String,
-  client_id: String,
-  scope: String,
-  state: String,
-  redirect_uri: String,
+  response_type: string,
+  client_id: string,
+  scope: string,
+  state: string,
+  redirect_uri: string,
 }
 
 type PayloadToken = {
-  grant_type: String,
-  code: String,
-  redirect_uri: String,
-  client_id: String,
-  client_secret: String,
-}
-
-type WebViewNavigationType = {
-  url: String,
-  loading: boolean,
+  grant_type: string,
+  code: string,
+  redirect_uri: string,
+  client_id: string,
+  client_secret: string,
 }
 
 const cleanState = (state: string) => state.replace('#!', '')
@@ -73,7 +69,7 @@ export default class LinkedInModal extends React.Component {
     StatusBar.setHidden(false)
   }
 
-  onNavigationStateChange = ({ url, loading }: WebViewNavigationType) => {
+  onNavigationStateChange = ({ url, loading }: Object) => {
     const { raceCondition, authState } = this.state
     const { callback, redirectUri, error } = this.props
     if (url.includes(redirectUri) && loading && !raceCondition) {
@@ -102,7 +98,7 @@ export default class LinkedInModal extends React.Component {
     return `${AUTHORIZATION_URL}?${querystring.stringify(query)}`
   }
 
-  getAccessToken = async (code: String) => {
+  getAccessToken = async (code: string) => {
     const { clientID, clientSecret, redirectUri, error } = this.props
     const payload: PayloadToken = {
       grant_type: 'authorization_code',
