@@ -88,11 +88,12 @@ export default class LinkedInModal extends React.Component {
 
   getAuthorizationUrl = () => {
     const { clientID, permissions, redirectUri } = this.props
+    const { authState } = this.state
     const query: QueryAuth = {
       response_type: 'code',
       client_id: clientID,
       scope: permissions.join(' ').trim(),
-      state: 'state',
+      state: authState,
       redirect_uri: redirectUri,
     }
     return `${AUTHORIZATION_URL}?${querystring.stringify(query)}`

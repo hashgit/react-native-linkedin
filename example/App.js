@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import {
   Platform,
@@ -41,7 +42,17 @@ export default class AppContainer extends React.Component {
           <Image source={require('./assets/linkedin.png')} style={styles.img} />
         </TouchableOpacity>
 
-        <LinkedInModal visible={this.state.linkedInModalOpen} />
+        <LinkedInModal
+          visible={this.state.linkedInModalOpen}
+          clientID="86vrfyx76mucrq"
+          clientSecret="as8w6lkXydkY94Is"
+          redirectUri="https://xaviercarpentier.com"
+          callback={token => {
+            alert(JSON.stringify(token))
+            this.setState({ linkedInModalOpen: false })
+            return
+          }}
+        />
 
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
