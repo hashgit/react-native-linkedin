@@ -1,6 +1,6 @@
 {
   "name": "react-native-linkedin",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "index.js",
   "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
   "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
