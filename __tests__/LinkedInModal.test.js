@@ -14,6 +14,7 @@ it('<LinkedInModal /> render correctly', () => {
         clientID="clientID"
         clientSecret="clientSecret"
         redirectUri="https://xaviercarpentier.fr"
+        authState="authState"
       />,
     )
     .toJSON()

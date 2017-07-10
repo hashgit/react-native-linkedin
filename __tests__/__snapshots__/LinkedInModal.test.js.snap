@@ -33,7 +33,7 @@ exports[`<LinkedInModal /> render correctly 1`] = `
       scrollEnabled={undefined}
       source={
         Object {
-          "uri": "https://www.linkedin.com/uas/oauth2/authorization?client_id=clientID&redirect_uri=https%3A%2F%2Fxaviercarpentier.fr&response_type=code&scope=r_basicprofile%20r_emailaddress&state=d3f4bd2c-4be5-4a06-aa5b-d84a0eacf655",
+          "uri": "https://www.linkedin.com/uas/oauth2/authorization?client_id=clientID&redirect_uri=https%3A%2F%2Fxaviercarpentier.fr&response_type=code&scope=r_basicprofile%20r_emailaddress&state=authState",
         }
       }
       style={

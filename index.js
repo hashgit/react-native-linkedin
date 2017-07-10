@@ -50,15 +50,16 @@ export default class LinkedInModal extends React.Component {
     clientSecret: PropTypes.string.isRequired,
     permissions: PropTypes.array,
     redirectUri: PropTypes.string.isRequired,
+    authState: PropTypes.string,
   }
   static defaultProps = {
     permissions: ['r_basicprofile', 'r_emailaddress'],
     // eslint-disable-next-line
     error: (error, payload) => console.error(error, payload),
+    authState: v4(),
   }
   state = {
     raceCondition: false,
-    authState: v4(),
   }
 
   componentWillMount() {
@@ -70,8 +71,8 @@ export default class LinkedInModal extends React.Component {
   }
 
   onNavigationStateChange = ({ url, loading }: Object) => {
-    const { raceCondition, authState } = this.state
-    const { callback, redirectUri, error } = this.props
+    const { raceCondition } = this.state
+    const { authState, callback, redirectUri, error } = this.props
     if (url.includes(redirectUri) && loading && !raceCondition) {
       const { code, state } = getCodeAndStateFromUrl(url)
       this.setState(async () => {
@@ -87,8 +88,7 @@ export default class LinkedInModal extends React.Component {
   }
 
   getAuthorizationUrl = () => {
-    const { clientID, permissions, redirectUri } = this.props
-    const { authState } = this.state
+    const { authState, clientID, permissions, redirectUri } = this.props
     const query: QueryAuth = {
       response_type: 'code',
       client_id: clientID,
