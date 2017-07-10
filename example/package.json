@@ -1,0 +1,14 @@
+{
+  "name": "linked-in-login-example",
+  "version": "1.0.0",
+  "description": "Expo example of React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
+  "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
+  "license": "MIT",
+  "main": "node_modules/expo/AppEntry.js",
+  "dependencies": {
+    "expo": "^18.0.4",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-18.0.1.tar.gz",
+    "react-native-linkedin": "1.0.9"
+  }
+}

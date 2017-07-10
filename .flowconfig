@@ -36,7 +36,7 @@
 .*/node_modules/sentry-expo/.*
 .*/node_modules/jest-resolve/.*
 .*/node_modules/metro-bundler/.*
-
+.*/example/.*
 
 .*/coverage/.*
 .*/e2e/.*

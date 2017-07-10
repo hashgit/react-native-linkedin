@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "LinkedIn login example",
+    "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
+    "slug": "linked-in-login-example",
+    "version": "1.0.0",
+    "privacy": "public",
+    "sdkVersion": "18.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/linkedin.png",
+    "notification": {
+      "color": "#000000"
+    },
+    "loading": {
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf"]
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

@@ -2,6 +2,7 @@
   "name": "react-native-linkedin",
   "version": "1.0.8",
   "main": "index.js",
+  "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
   "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
   "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
   "bugs": {
@@ -14,7 +15,7 @@
     "lint": "eslint .",
     "flow": "flow",
     "bump": "yarn version --new-version $NEW_VERSION && git push --follow-tags",
-    "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn install"
+    "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*"
   },
   "keywords": ["react-native", "react-native-linkedin", "linkedin"],
   "files": ["index.js", "README.md"],
@@ -41,7 +42,11 @@
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "modulePathIgnorePatterns": ["./example/"]
+  },
+  "babel": {
+    "presets": ["react-native"]
   },
   "eslintConfig": {
     "extends": ["airbnb", "airbnb-flow"],
