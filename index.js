@@ -3,7 +3,7 @@
  * @flow
  */
 
-import React from 'React'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { pipe, evolve } from 'ramda'
 import { v4 } from 'uuid'
