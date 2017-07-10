@@ -55,4 +55,6 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env.expo
+.env
+
+.expo
