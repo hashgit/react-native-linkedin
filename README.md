@@ -91,7 +91,8 @@ You should be aware that key can be found if you store it directly to your code.
 ## Roadmap & TODOs
 - [ ] Better style for modal: border, padding, transparency
 - [ ] Button to close the modal
-- or [propose with creating an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
+
+[Propose](https://github.com/xcarpentier/react-native-linkedin/issues/new)
 
 ## FAQ
 ### Is it supported and tested both on android and iOS?
