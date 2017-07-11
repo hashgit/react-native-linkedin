@@ -80,7 +80,10 @@ You should be aware that key can be found if you store it directly to your code.
 - [ ] Button to close the modal
 - [ ] Add gif example in README
 - [ ] Test every line of code
-- [ ] Pubish example to expo
+- [ ] Publish example to expo
+- [ ] Better catch of error into login url
+- [ ] Add props or other function to fetch more informations like basic profile information
+
 
 [> Propose](https://github.com/xcarpentier/react-native-linkedin/issues/new)
 
