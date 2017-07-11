@@ -33,7 +33,7 @@ type PayloadToken = {
   client_secret: string,
 }
 
-type Token = {
+export type Token = {
   access_token: string,
   expires_in: number,
 }
@@ -58,9 +58,9 @@ export default class LinkedInModal extends React.Component {
     authState: PropTypes.string,
   }
   static defaultProps = {
-    permissions: ['r_basicprofile', 'r_emailaddress'],
     // eslint-disable-next-line
     error: (error, payload) => console.error(error, payload),
+    permissions: ['r_basicprofile', 'r_emailaddress'],
     authState: v4(),
   }
   state = {
