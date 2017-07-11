@@ -92,6 +92,7 @@ You should be aware that key can be found if you store it directly to your code.
 - [ ] Better style for modal: border, padding, transparency
 - [ ] Button to close the modal
 - [ ] Add gif example in README
+- [ ] Test every line of code
 
 [> Propose](https://github.com/xcarpentier/react-native-linkedin/issues/new)
 
