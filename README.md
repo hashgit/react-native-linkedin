@@ -17,19 +17,26 @@ Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Mo
 
 ## Installation
 ```bash
-$ npm i react-native-linkedin --save
+$ yarn add react-native-linkedin
 ```
 or
 ```bash
-$ yarn add react-native-linkedin
+$ npm i react-native-linkedin --save
 ```
 
-## Documentation (WIP)
+## Documentation
 
 ### Props
-| Name | Return Type | Arguments | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| visible | boolean | required | | Show the LinkedIn modal |
+| clientID | string | required | | Your client id from https://www.linkedin.com/developer/apps |
+| clientSecret | string | required | | Your client secret from https://www.linkedin.com/developer/apps |
+| redirectUri | string | required | | Your redirectUri set here https://www.linkedin.com/developer/apps |
+| callback | function | required | | Function  will be call back on success |
+| error | function | optional | `console.error(err)` | Function  will be call back on error |
+| permissions | array | optional | `['r_basicprofile', 'r_emailaddress']` | The LinkedIn access token permissions |
+| authState | string | optional | `require('uuid').v4()` | The state of auth, to be more secure |
 
 ### Example
 ```JavaScript
