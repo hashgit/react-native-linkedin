@@ -3,7 +3,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import LinkedInModal from '../'
 
-jest.unmock('ScrollView')
+jest.mock('WebView', () => 'WebView')
 
 it('<LinkedInModal /> render correctly', () => {
   const tree = renderer

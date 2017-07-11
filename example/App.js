@@ -48,9 +48,9 @@ export default class AppContainer extends React.Component {
           clientSecret="as8w6lkXydkY94Is"
           redirectUri="https://xaviercarpentier.com"
           callback={token => {
-            alert(JSON.stringify(token))
+            // eslint-disable-next-line
+            console.log(token)
             this.setState({ linkedInModalOpen: false })
-            return
           }}
         />
 
