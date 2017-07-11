@@ -7,8 +7,6 @@
 
 Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Modal*
 
-*Please note that is on WIP (ie. work in progress)!*
-
 ## Benefits & others:
 * **Light**: No need to link a native library like others alternatives
 * **Simple**: Get the token and the expires, you handle your own login with the access_token
