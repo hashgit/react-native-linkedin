@@ -89,9 +89,9 @@ You should be aware that key can be found if you store it directly to your code.
 **PRs are welcome!**
 
 ## Roadmap & TODOs
-* <input type="checkbox" /> Better style for modal: border, padding, transparency
-* <input type="checkbox" /> Button to close the modal
-* or [propose with creating an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
+- [ ] Better style for modal: border, padding, transparency
+- [ ] Button to close the modal
+- or [propose with creating an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
 
 ## FAQ
 ### Is it supported and tested both on android and iOS?
