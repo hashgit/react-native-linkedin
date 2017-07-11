@@ -33,6 +33,11 @@ type PayloadToken = {
   client_secret: string,
 }
 
+type Token = {
+  access_token: string,
+  expires_in: number,
+}
+
 const cleanState = (state: string) => state.replace('#!', '')
 
 const getCodeAndStateFromUrl = pipe(
@@ -79,7 +84,7 @@ export default class LinkedInModal extends React.Component {
         if (state !== authState) {
           error(`state is not the same ${state}`)
         } else {
-          const token = await this.getAccessToken(code)
+          const token: Token | {} = await this.getAccessToken(code)
           callback(token)
         }
         return { raceCondition: true }
@@ -87,7 +92,7 @@ export default class LinkedInModal extends React.Component {
     }
   }
 
-  getAuthorizationUrl = () => {
+  getAuthorizationUrl: void => string = () => {
     const { authState, clientID, permissions, redirectUri } = this.props
     const query: QueryAuth = {
       response_type: 'code',
@@ -99,7 +104,7 @@ export default class LinkedInModal extends React.Component {
     return `${AUTHORIZATION_URL}?${querystring.stringify(query)}`
   }
 
-  getAccessToken = async (code: string) => {
+  getAccessToken: string => Promise<Token | {}> = async (code: string) => {
     const { clientID, clientSecret, redirectUri, error } = this.props
     const payload: PayloadToken = {
       grant_type: 'authorization_code',
