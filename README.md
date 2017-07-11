@@ -29,7 +29,7 @@ $ npm i react-native-linkedin --save
 ### Props
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| visible | boolean | required | | Show the LinkedIn modal |
+| visible | boolean | required | | Show the LinkedIn modal. **You should close the modal by yourself.** |
 | clientID | string | required | | Your client id from https://www.linkedin.com/developer/apps |
 | clientSecret | string | required | | Your client secret from https://www.linkedin.com/developer/apps |
 | redirectUri | string | required | | Your redirectUri set here https://www.linkedin.com/developer/apps |
@@ -42,28 +42,29 @@ $ npm i react-native-linkedin --save
 ```JavaScript
 // See ./example folder for details
 import LinkedInModal from 'react-native-linkedin'
+import { View, TouchableOpacity } from 'react-native'
 
 class AppContainer extends React.Component {
   state = {
-    linkedInModalOpen: false,
+    isLinkedInModalVisible: false,
   }
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <TouchableOpacity
-          onPress={() => this.setState({ linkedInModalOpen: true })}
+          onPress={() => this.setState({ isLinkedInModalVisible: true })}
         >
           Connect with LinkedIn!
         </TouchableOpacity>
 
         <LinkedInModal
-          visible={this.state.linkedInModalOpen}
+          visible={this.state.isLinkedInModalVisible}
           clientID="[ Your client id from https://www.linkedin.com/developer/apps ]"
           clientSecret="[ Your client secret from https://www.linkedin.com/developer/apps ]"
-          redirectUri="[ your redirectUri set into https://www.linkedin.com/developer/apps ]"
+          redirectUri="[ Your redirect uri set into https://www.linkedin.com/developer/apps ]"
           callback={token => {
             console.log(token)
-            this.setState({ linkedInModalOpen: false })
+            this.setState({ isLinkedInModalVisible: false })
           }}
         />
       </View>
