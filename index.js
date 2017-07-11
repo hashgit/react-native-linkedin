@@ -38,13 +38,13 @@ export type Token = {
   expires_in: number,
 }
 
-const cleanState = (state: string) => state.replace('#!', '')
+export const cleanState: string => string = (state: string) =>
+  state.replace('#!', '')
 
-const getCodeAndStateFromUrl = pipe(
-  querystring.extract,
-  querystring.parse,
-  evolve({ state: cleanState }),
-)
+export const getCodeAndStateFromUrl: string => {
+  code: string,
+  state: string,
+} = pipe(querystring.extract, querystring.parse, evolve({ state: cleanState }))
 
 export default class LinkedInModal extends React.Component {
   static propTypes = {
