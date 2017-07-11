@@ -10,14 +10,12 @@ Simple **LinkedIn** login library for **React-Native** with *WebView* into a *Mo
 *Please note that is on WIP (ie. work in progress)!*
 
 ## Benefits & others:
-* Light: No need to link a native library like others alternatives
-* Simple: Get the token and the expires, you handle your own login with the access_token
-* Sure: open-source
-* Almost readable & understandable code: JavaScript & React
+* **Light**: No need to link a native library like others alternatives
+* **Simple**: Get the token and the expires, you handle your own login with the access_token
+* **Sure**: open-source
+* **Almost readable & understandable code**: JavaScript & React
 
 ## Installation
-WIP
-<!--
 ```bash
 $ npm i react-native-linkedin --save
 ```
@@ -25,7 +23,6 @@ or
 ```bash
 $ yarn add react-native-linkedin
 ```
--->
 
 ## Documentation (WIP)
 
@@ -36,12 +33,41 @@ $ yarn add react-native-linkedin
 
 ### Example
 ```JavaScript
-// TODO
+// See ./example folder for details
+import LinkedInModal from 'react-native-linkedin'
+
+class AppContainer extends React.Component {
+  state = {
+    linkedInModalOpen: false,
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => this.setState({ linkedInModalOpen: true })}
+        >
+          Connect with LinkedIn!
+        </TouchableOpacity>
+
+        <LinkedInModal
+          visible={this.state.linkedInModalOpen}
+          clientID="[ Your client id from https://www.linkedin.com/developer/apps ]"
+          clientSecret="[ Your client secret from https://www.linkedin.com/developer/apps ]"
+          redirectUri="[ your redirectUri set into https://www.linkedin.com/developer/apps ]"
+          callback={token => {
+            console.log(token)
+            this.setState({ linkedInModalOpen: false })
+          }}
+        />
+      </View>
+    )
+  }
 ```
+
 ## Security
 
 Please not that you should pass your linkedin client id and you secret key to the component.
-You should be aware that key can be found if you store it directly to your code. 
+You should be aware that key can be found if you store it directly to your code.
 **I strongly recommand to not declare both on your code but found a way to keep it secret (ie. get it from server, encrypt it, ...)**
 
 ## Others alternatives
@@ -53,12 +79,21 @@ You should be aware that key can be found if you store it directly to your code.
 
 - [@xcapentier](mailto:contact@xaviercarpentier.com) The main author.
 
+**PRs are welcome!**
+
+## Roadmap & TODOs
+* <input type="checkbox" /> Better style for modal: border, padding, transparency
+* <input type="checkbox" /> Button to close the modal
+* or [propose with creating an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
+
 ## FAQ
 ### Is it supported and tested both on android and iOS?
 **YES**
 
 ## Questions
 Feel free to [contact me](mailto:contact@xaviercarpentier.com) or [create an issue](https://github.com/xcarpentier/react-native-linkedin/issues/new)
+
+> made with ♥
 
 ## Licence
 [MIT](https://github.com/xcarpentier/react-native-linkedin/blob/master/LICENSE)
