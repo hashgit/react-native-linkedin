@@ -2827,8 +2827,9 @@ react-native-branch@2.0.0-beta.3:
   dependencies:
     eventemitter3 "^2.0.2"
 
-react-native-linkedin@../:
-  version "1.0.15"
+react-native-linkedin@1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/react-native-linkedin/-/react-native-linkedin-1.0.16.tgz#b32578acdbadcc476160e8e1e6eec45b7c5b77f4"
   dependencies:
     query-string "^4.3.4"
     ramda "^0.24.1"
@@ -3575,7 +3576,7 @@ watch@~0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/watch/-/watch-0.10.0.tgz#77798b2da0f9910d595f1ace5b0c2258521f21dc"
 
-"websql@github:expo/node-websql#18.0.0":
+websql@expo/node-websql#18.0.0:
   version "0.4.4"
   resolved "https://codeload.github.com/expo/node-websql/tar.gz/e364fa65146a9e2157a19e5c719e7702c2b6b87a"
   dependencies:
