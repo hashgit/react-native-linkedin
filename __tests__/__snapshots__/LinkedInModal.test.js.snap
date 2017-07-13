@@ -1,22 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LinkedInModal /> render correctly 1`] = `
-<Modal
-  animationType="slide"
-  hardwareAccelerated={false}
-  transparent={false}
-  visible={true}
->
-  <WebView
-    domStorageEnabled={true}
-    javaScriptEnabled={true}
-    onNavigationStateChange={[Function]}
-    source={
+<View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
       Object {
-        "uri": "https://www.linkedin.com/uas/oauth2/authorization?client_id=clientID&redirect_uri=https%3A%2F%2Fxaviercarpentier.fr&response_type=code&scope=r_basicprofile%20r_emailaddress&state=authState",
+        "opacity": 1,
       }
     }
-    startInLoadingState={true}
-  />
-</Modal>
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+    >
+      Login with LinkedIn
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "flex": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 40,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "rgba(0, 0, 0, 0.6)",
+            "borderRadius": 5,
+            "borderWidth": 10,
+            "flex": 1,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Modal
+        animationType="fade"
+        hardwareAccelerated={false}
+        transparent={true}
+        visible={false}
+      >
+        <WebView
+          domStorageEnabled={true}
+          injectedJavaScript="document.querySelector(\\"input[type=text]\\").setAttribute(\\"autocapitalize\\", \\"off\\")"
+          javaScriptEnabled={true}
+          onLoadStart={[Function]}
+          source={
+            Object {
+              "uri": "https://www.linkedin.com/uas/oauth2/authorization?client_id=clientID&redirect_uri=https%3A%2F%2Fxaviercarpentier.fr&response_type=code&scope=r_basicprofile%20r_emailaddress&state=authState",
+            }
+          }
+          startInLoadingState={true}
+        />
+      </Modal>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#000",
+        "borderColor": "rgba(0, 0, 0, 0.4)",
+        "borderRadius": 12,
+        "borderWidth": 2,
+        "height": 24,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "right": 5,
+        "top": 35,
+        "width": 24,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
 `;

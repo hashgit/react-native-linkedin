@@ -27,14 +27,22 @@ $ npm i react-native-linkedin --save
 ### Props
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| visible | boolean | required | | Show the LinkedIn modal. **You should close the modal by yourself.** |
-| clientID | string | required | | Your client id from https://www.linkedin.com/developer/apps |
-| clientSecret | string | required | | Your client secret from https://www.linkedin.com/developer/apps |
-| redirectUri | string | required | | Your redirectUri set here https://www.linkedin.com/developer/apps |
-| callback | function | required | | Function  will be call back on success |
-| error | function | optional | `console.error(err)` | Function  will be call back on error |
-| permissions | array | optional | `['r_basicprofile', 'r_emailaddress']` | The LinkedIn access token permissions |
+| clientID | string | **required** | | Your client id from https://www.linkedin.com/developer/apps |
+| clientSecret | string | **required** | | Your client secret from https://www.linkedin.com/developer/apps |
+| redirectUri | string | **required** | | Your redirectUri set here https://www.linkedin.com/developer/apps |
+| onSuccess | function | **required** | | Function  will be call back on success |
 | authState | string | optional | `require('uuid').v4()` | The state of auth, to be more secure |
+| onError | function | optional | `console.error(err)` | Function  will be call back on error |
+| onClose | function | optional | | Function  will be call back on close modal |
+| onOpen | function | optional | | Function  will be call back on open modal |
+| permissions | array | optional | `['r_basicprofile', 'r_emailaddress']` | The LinkedIn access token permissions |
+| renderButton | function | optional | | Render function for customize LinkedIn button  |
+| renderClose | function | optional | | Render function for customize close button  |
+| linkText | string | optional | `'Login with LinkedIn'` | Link label |
+| containerStyle | View.propTypes.style | optional | | Customize container style |
+| wrapperStyle | View.propTypes.style | optional | | Customize wrapper style |
+| closeStyle | View.propTypes.style | optional | | Customize close style |
+| animationType | Modal.propTypes.animationType | optional | `fade` | Customize animationType style: 'none', 'slide' or 'fade' |
 
 ### Example
 ```JavaScript
