@@ -27,9 +27,9 @@ $ npm i react-native-linkedin --save
 ### Props
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| clientID | string | **required** | | Your client id from https://www.linkedin.com/developer/apps |
-| clientSecret | string | **required** | | Your client secret from https://www.linkedin.com/developer/apps |
-| redirectUri | string | **required** | | Your redirectUri set here https://www.linkedin.com/developer/apps |
+| clientID | string | **required** | | [Your client id](https://www.linkedin.com/developer/apps) |
+| clientSecret | string | **required** | | [Your client secret](https://www.linkedin.com/developer/apps) |
+| redirectUri | string | **required** | | [Your redirectUri](https://www.linkedin.com/developer/apps) |
 | onSuccess | function | **required** | | Function  will be call back on success |
 | authState | string | optional | `require('uuid').v4()` | The state of auth, to be more secure |
 | onError | function | optional | `console.error(err)` | Function  will be call back on error |
