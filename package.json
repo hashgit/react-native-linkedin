@@ -2,11 +2,7 @@
   "name": "react-native-linkedin",
   "version": "1.0.18",
   "main": "index.js",
-  "files": [
-    "index.js",
-    "README.md",
-    "./assets/"
-  ],
+  "files": ["assets/x-white.png"],
   "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
   "repository": "https://github.com/xcarpentier/react-native-linkedin.git",
   "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
@@ -22,11 +18,7 @@
     "bump": "yarn version --new-version $NEW_VERSION && git push --follow-tags",
     "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*"
   },
-  "keywords": [
-    "react-native",
-    "react-native-linkedin",
-    "linkedin"
-  ],
+  "keywords": ["react-native", "react-native-linkedin", "linkedin"],
   "dependencies": {
     "query-string": "^4.3.4",
     "ramda": "^0.24.1",
@@ -51,25 +43,15 @@
   },
   "jest": {
     "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "./example/"
-    ]
+    "modulePathIgnorePatterns": ["./example/"]
   },
   "babel": {
-    "presets": [
-      "react-native"
-    ]
+    "presets": ["react-native"]
   },
   "eslintConfig": {
-    "extends": [
-      "airbnb",
-      "airbnb-flow"
-    ],
+    "extends": ["airbnb", "airbnb-flow"],
     "parser": "babel-eslint",
-    "plugins": [
-      "react",
-      "react-native"
-    ],
+    "plugins": ["react", "react-native"],
     "globals": {
       "__DEV__": false,
       "fetch": false,
@@ -81,9 +63,7 @@
       "FormData": false
     },
     "rules": {
-      "global-require": [
-        0
-      ],
+      "global-require": [0],
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
       "import/extensions": 0,
@@ -96,15 +76,8 @@
       "camelcase": 0,
       "no-underscore-dangle": 0,
       "no-confusing-arrow": 0,
-      "semi": [
-        "error",
-        "never"
-      ],
-      "max-len": [
-        2,
-        80,
-        2
-      ]
+      "semi": ["error", "never"],
+      "max-len": [2, 80, 2]
     }
   }
 }
