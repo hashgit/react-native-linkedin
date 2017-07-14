@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   xWhite: {
-    widdth: 30,
+    width: 30,
     height: 30,
   },
 })

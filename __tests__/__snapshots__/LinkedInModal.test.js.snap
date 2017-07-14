@@ -117,6 +117,12 @@ exports[`<LinkedInModal /> render correctly 1`] = `
       >
         <Image
           source={1}
+          style={
+            Object {
+              "height": 30,
+              "width": 30,
+            }
+          }
         />
       </View>
     </View>
