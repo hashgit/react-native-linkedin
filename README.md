@@ -39,9 +39,9 @@ $ npm i react-native-linkedin --save
 | renderButton | function | optional | | Render function for customize LinkedIn button  |
 | renderClose | function | optional | | Render function for customize close button  |
 | linkText | string | optional | `'Login with LinkedIn'` | Link label |
-| containerStyle | View.propTypes.style | optional | | Customize container style |
-| wrapperStyle | View.propTypes.style | optional | | Customize wrapper style |
-| closeStyle | View.propTypes.style | optional | | Customize close style |
+| containerStyle | ViewPropTypes.style | optional | | Customize container style |
+| wrapperStyle | ViewPropTypes.style | optional | | Customize wrapper style |
+| closeStyle | ViewPropTypes.style | optional | | Customize close style |
 | animationType | Modal.propTypes.animationType | optional | `fade` | Customize animationType style: 'none', 'slide' or 'fade' |
 
 ### Example
