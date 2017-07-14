@@ -281,13 +281,9 @@ export default class LinkedInModal extends React.Component {
         <TouchableOpacity onPress={this.open}>
           {this.renderButton()}
         </TouchableOpacity>
-        <View style={[styles.constainer, containerStyle]}>
-          <View style={[styles.wrapper, wrapperStyle]}>
-            <Modal
-              animationType={animationType}
-              transparent
-              visible={modalVisible}
-            >
+        <Modal animationType={animationType} transparent visible={modalVisible}>
+          <View style={[styles.constainer, containerStyle]}>
+            <View style={[styles.wrapper, wrapperStyle]}>
               <WebView
                 source={{ uri: this.getAuthorizationUrl() }}
                 onLoadStart={this.onLoadStart}
@@ -296,15 +292,15 @@ export default class LinkedInModal extends React.Component {
                 domStorageEnabled
                 injectedJavaScript={injectedJavaScript()}
               />
-            </Modal>
+            </View>
+            <TouchableOpacity
+              onPress={this.close}
+              style={[styles.close, closeStyle]}
+            >
+              {this.renderClose()}
+            </TouchableOpacity>
           </View>
-        </View>
-        <TouchableOpacity
-          onPress={this.close}
-          style={[styles.close, closeStyle]}
-        >
-          {this.renderClose()}
-        </TouchableOpacity>
+        </Modal>
       </View>
     )
   }
