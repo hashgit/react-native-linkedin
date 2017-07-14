@@ -36,26 +36,17 @@ export default class AppContainer extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity
-          onPress={() => this.setState({ linkedInModalOpen: true })}
-        >
-          <Image source={require('./assets/linkedin.png')} style={styles.img} />
-        </TouchableOpacity>
-
         <LinkedInModal
           visible={this.state.linkedInModalOpen}
           clientID="86vrfyx76mucrq"
           clientSecret="as8w6lkXydkY94Is"
           redirectUri="https://xaviercarpentier.com"
-          callback={token => {
+          onSuccess={token => {
             // eslint-disable-next-line
             console.log(token)
             this.setState({ linkedInModalOpen: false })
           }}
         />
-
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
       </View>
     )
   }
