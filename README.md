@@ -48,9 +48,8 @@ $ npm i react-native-linkedin --save
 ### Example
 ```JavaScript
 // See ./example folder for details
-// @flow
 import React from 'react'
-import { StyleSheet, View, Dimensions } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
 import LinkedInModal from 'react-native-linkedin'
 
@@ -71,11 +70,7 @@ export default class AppContainer extends React.Component {
           clientID="[ Your client id from https://www.linkedin.com/developer/apps ]"
           clientSecret="[ Your client secret from https://www.linkedin.com/developer/apps ]"
           redirectUri="[ Your redirect uri set into https://www.linkedin.com/developer/apps ]"
-          onSuccess={token => {
-            // eslint-disable-next-line
-            console.log(token)
-            this.setState({ linkedInModalOpen: false })
-          }}
+          onSuccess={token => console.log(token)}
         />
       </View>
     )
@@ -90,12 +85,12 @@ Please not that you should pass your linkedin client id and you secret key to th
 You should be aware that key can be found if you store it directly to your code.
 **I strongly recommand to not declare both on your code but found a way to keep it secret (ie. get it from server, encrypt it, ...)**
 ## Roadmap & TODOs
-- [ ] Better style for modal: border, padding, transparency
-- [ ] Button to close the modal
+- [x] Better style for modal: border, padding, transparency
+- [x] Button to close the modal
+- [x] Test every line of code
+- [x] Better catch of error into login url
 - [ ] Add gif example in README
-- [ ] Test every line of code
 - [ ] Publish example to expo
-- [ ] Better catch of error into login url
 - [ ] Add props or other function to fetch more informations like basic profile information
 
 
