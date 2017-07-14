@@ -48,35 +48,40 @@ $ npm i react-native-linkedin --save
 ### Example
 ```JavaScript
 // See ./example folder for details
-import LinkedInModal from 'react-native-linkedin'
-import { View, TouchableOpacity } from 'react-native'
+// @flow
+import React from 'react'
+import { StyleSheet, View, Dimensions } from 'react-native'
 
-class AppContainer extends React.Component {
-  state = {
-    isLinkedInModalVisible: false,
-  }
+import LinkedInModal from 'react-native-linkedin'
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
+
+export default class AppContainer extends React.Component {
   render() {
     return (
-      <View>
-        <TouchableOpacity
-          onPress={() => this.setState({ isLinkedInModalVisible: true })}
-        >
-          Connect with LinkedIn!
-        </TouchableOpacity>
-
+      <View style={styles.container}>
         <LinkedInModal
-          visible={this.state.isLinkedInModalVisible}
           clientID="[ Your client id from https://www.linkedin.com/developer/apps ]"
           clientSecret="[ Your client secret from https://www.linkedin.com/developer/apps ]"
           redirectUri="[ Your redirect uri set into https://www.linkedin.com/developer/apps ]"
-          callback={token => {
+          onSuccess={token => {
+            // eslint-disable-next-line
             console.log(token)
-            this.setState({ isLinkedInModalVisible: false })
+            this.setState({ linkedInModalOpen: false })
           }}
         />
       </View>
     )
   }
+}
+
 ```
 
 ## Security

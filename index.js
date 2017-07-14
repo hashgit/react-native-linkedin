@@ -155,10 +155,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  xWhite: {
-    width: 30,
-    height: 30,
-  },
 })
 
 export default class LinkedInModal extends React.Component {
@@ -270,7 +266,7 @@ export default class LinkedInModal extends React.Component {
     if (renderClose) return renderClose()
     return (
       // $DisableFlow
-      <Image source={require('./assets/x-white.png')} style={styles.xWhite} />
+      <Image source={require('./assets/x-white.png')} resizeMode="contain" />
     )
   }
 
