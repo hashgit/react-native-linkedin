@@ -268,8 +268,8 @@ export default class LinkedInModal extends React.Component {
   renderClose = () => {
     const { renderClose } = this.props
     if (renderClose) return renderClose()
-    // $DisableFlow
     return (
+      // $DisableFlow
       <Image source={require('./assets/x-white.png')} style={styles.xWhite} />
     )
   }
