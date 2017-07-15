@@ -193,12 +193,12 @@ export default class LinkedInModal extends React.Component {
     modalVisible: false,
   }
 
-  onLoadStart = ({ nativeEvent: { url } }: Object) => {
+  onLoadStart = async ({ nativeEvent: { url } }: Object) => {
     const { raceCondition } = this.state
     const { redirectUri, onError } = this.props
 
     if (url.includes(redirectUri) && !raceCondition) {
-      this.setState({ modalVisible: false })
+      this.setState({ modalVisible: false, raceCondition: true })
       if (isErrorUrl(url)) {
         const err = getErrorFromUrl(url)
         this.close()
@@ -206,18 +206,15 @@ export default class LinkedInModal extends React.Component {
       } else {
         const { authState, onSuccess } = this.props
         const { code, state } = getCodeAndStateFromUrl(url)
-        this.setState(async () => {
-          if (state !== authState) {
-            onError({
-              type: 'state_not_match',
-              message: `state is not the same ${state}`,
-            })
-          } else {
-            const token: LinkedInToken | {} = await this.getAccessToken(code)
-            onSuccess(token)
-          }
-          return { raceCondition: true }
-        })
+        if (state !== authState) {
+          onError({
+            type: 'state_not_match',
+            message: `state is not the same ${state}`,
+          })
+        } else {
+          const token: LinkedInToken | {} = await this.getAccessToken(code)
+          onSuccess(token)
+        }
       }
     }
   }
