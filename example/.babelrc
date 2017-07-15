@@ -1,5 +1,6 @@
 {
   "presets": ["babel-preset-expo"],
+  "plugins": ["transform-flow-strip-types"],
   "env": {
     "development": {
       "plugins": ["transform-react-jsx-source"]

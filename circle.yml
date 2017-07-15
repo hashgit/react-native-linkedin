@@ -16,6 +16,7 @@ dependencies:
       else
         echo "The correct version of Yarn is already installed."
       fi
+      yarn global add codecov
   override:
     - yarn install --no-progress --no-emoji
   cache_directories:
@@ -28,6 +29,7 @@ test:
     - yarn run lint
     - yarn run flow
     - yarn run test -- --coverage
+    - codecov
 
 deployment:
   npm:

@@ -21,11 +21,7 @@ export default class AppContainer extends React.Component {
           clientID="86vrfyx76mucrq"
           clientSecret="as8w6lkXydkY94Is"
           redirectUri="https://xaviercarpentier.com"
-          onSuccess={token => {
-            // eslint-disable-next-line
-            console.log(token)
-            this.setState({ linkedInModalOpen: false })
-          }}
+          onSuccess={token => console.log(JSON.stringify(token, null, 2))}
         />
       </View>
     )
